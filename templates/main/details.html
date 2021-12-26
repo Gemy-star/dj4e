@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+ {% for q in question %}
+ <h1>{{ q.question_text }}</h1>
+     <hr/>
+     <h1>{{ q.pub_date }}</h1>
+     <a href="{% url 'results' q.id %}"> answers</a>
+{% endfor %}
+</body>
+</html>
